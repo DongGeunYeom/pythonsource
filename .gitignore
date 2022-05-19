@@ -1,0 +1,9 @@
+jquery/jquery-3.6.0.js
+jquery/jquery-3.6.0.min.js
+jquery/bootstrap.min.css
+Lib
+*.cfg
+*.bat
+*.exe
+*.ps1
+Scripts/activate
