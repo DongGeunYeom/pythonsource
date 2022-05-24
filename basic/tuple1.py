@@ -19,3 +19,21 @@ print(t5)
 # del t2[1] # TypeError: 'tuple' object doesn't support item deletion
 
 # t2[1] = 5 # TypeError: 'tuple' object does not support item assignment
+
+# 인덱싱 / 슬라이싱
+print("t2[1]", t2[1])
+print("t2[0:3]", t2[0:3])
+print("t4[1] + t4[2]", t4[1]+t4[2])
+print("t3 * 2", t3 * 2)
+
+print()
+
+# 튜플 ==> 리스트 변환, 리스트 ==> 튜플
+print(list(t4))
+
+list1 = list(t4)
+list1[2] = 7
+print(list1)
+
+t4= tuple(list1)
+print(t4)
