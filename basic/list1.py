@@ -282,3 +282,7 @@ print()
 fruits = ["Banana", "Apple", "Orange", "Grape"]
 fruits.remove("Apple")  # == del fruits[1]
 print(fruits)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7bc5c43a001f4ed99d8e854413fd5115b3e33cb5
