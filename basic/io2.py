@@ -73,26 +73,26 @@
 #             % (name, int(weight), int(height), bmi, msg)
 #         )
 
-with open("data/info.txt", "r", encoding="utf-8") as f:
-    for info in f:
-        (name, weight, height) = info.strip().split(", ")
-        print(name, weight, height)
-        bmi = int(weight) / (int(height) / 100) ** 2
-        result = ""
+# with open("data/info.txt", "r", encoding="utf-8") as f:
+#     for info in f:
+#         (name, weight, height) = info.strip().split(", ")
+#         print(name, weight, height)
+#         bmi = int(weight) / (int(height) / 100) ** 2
+#         result = ""
 
-        if bmi >= 25:
-            result = "과체중"
-        elif bmi >= 18.5:
-            result = "정상체중"
-        else:
-            result = "저체중"
+#         if bmi >= 25:
+#             result = "과체중"
+#         elif bmi >= 18.5:
+#             result = "정상체중"
+#         else:
+#             result = "저체중"
 
-        print(
-            "\n".join(["이름 : {}", "몸무게 : {}", "키 : {}", "BMI : {}", "결과 : {}"]).format(
-                name, weight, height, bmi, result
-            )
-        )
-        print()
+#         print(
+#             "\n".join(["이름 : {}", "몸무게 : {}", "키 : {}", "BMI : {}", "결과 : {}"]).format(
+#                 name, weight, height, bmi, result
+#             )
+#         )
+#         print()
 
 
 # 원본 파일을 읽은 후 암호화, 암호화된 파일을 읽은 후 복호화 프로그램 작성

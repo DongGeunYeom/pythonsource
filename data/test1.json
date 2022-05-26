@@ -1,0 +1,9 @@
+{
+  "id": "hong",
+  "language": [
+    "java",
+    "script"
+  ],
+  "edition": "3.9",
+  "author": "Guido van Rossum"
+}
