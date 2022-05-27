@@ -5,10 +5,10 @@
 
 # 생성
 t1 = ()
-t2 = (1,2,3)
-t3 = (1,) # 1개의 요소만을 가질 때 요소 뒤에 콤마 반드시 필요
-t4 = 4,5,6 # 여러 개 요소가 존재시 괄호 생략 가능
-t5 = ("a","b","c",("d","e"))
+t2 = (1, 2, 3)
+t3 = (1,)  # 1개의 요소만을 가질 때 요소 뒤에 콤마 반드시 필요
+t4 = 4, 5, 6  # 괄호 생략 가능
+t5 = ("a", "b", ("c", "d"))
 
 print(t1)
 print(t2)
@@ -20,10 +20,10 @@ print(t5)
 
 # t2[1] = 5 # TypeError: 'tuple' object does not support item assignment
 
-# 인덱싱 / 슬라이싱
+# 인덱싱/슬라이싱
 print("t2[1]", t2[1])
 print("t2[0:3]", t2[0:3])
-print("t4[1] + t4[2]", t4[1]+t4[2])
+print("t4[1] + t4[2]", t4[1] + t4[2])
 print("t3 * 2", t3 * 2)
 
 print()
@@ -35,5 +35,5 @@ list1 = list(t4)
 list1[2] = 7
 print(list1)
 
-t4= tuple(list1)
+t4 = tuple(list1)
 print(t4)

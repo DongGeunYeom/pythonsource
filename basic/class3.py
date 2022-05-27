@@ -1,5 +1,4 @@
-# 클래스 변수 - 반드시 선언 필요, 클래스이름, 클래스변수 사용
-
+# 클래스 변수 - 반드시 선언 필요, 클래스이름.클래스변수 사용
 
 class UserInfo:
     """
@@ -14,8 +13,7 @@ class UserInfo:
     def __init__(self, name, age) -> None:
         self.name = name
         self.age = age
-
-        # 클래스 변수 : static과 같은 개념
+        # 클래스 변수 : static 과 같은 개념
         UserInfo.user_cnt += 1
 
     def user_info(self):
@@ -27,13 +25,12 @@ class UserInfo:
 
 user1 = UserInfo("홍길동", 25)
 user2 = UserInfo("성춘향", 26)
-user3 = UserInfo("이몽룡", 66)
+
 print(user1.user_info())
 print(user2.user_info())
 
-print("현재 생성된 user {}명 ".format(UserInfo.user_cnt))
+print("현재 생성된 User {}명".format(UserInfo.user_cnt))
 
 # 객체 삭제
-del user1 # __del__  호출됨
-
-print("현재 생성된 user {}명 ".format(UserInfo.user_cnt))
+del user1  # __del__ 호출됨
+print("현재 생성된 User {}명".format(UserInfo.user_cnt))
