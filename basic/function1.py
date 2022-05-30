@@ -7,7 +7,6 @@
 #   수행할 문장2
 
 # 함수 작성
-from tkinter.messagebox import RETRY
 
 
 def hello():

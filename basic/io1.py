@@ -58,7 +58,7 @@
 
 
 # 1000 명의 키와 몸무게를 랜덤으로 생성한 후 파일 작성
-import random
+# import random
 
 # list1 = list("가나다라마바사아자차카타파하")
 # # print(list1)
