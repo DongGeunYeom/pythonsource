@@ -1,6 +1,5 @@
 import requests
 from fake_useragent import UserAgent
-
 import csv
 
 headers = {"user-agent": UserAgent().chrome, "referer": "https://finance.daum.net/"}
@@ -10,7 +9,7 @@ data = []
 try:
     url = "http://finance.daum.net/api/search/ranks?limit=10"
     res = requests.get(url, headers=headers)
-    # print(res)
+    # print(res.text)
 
     rank_json = res.json()["data"]
 

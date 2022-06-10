@@ -12,5 +12,5 @@ res = requests.get("http://www.naver.com")
 print(res.text)
 
 # 응답 상태
-print(res.status_code)
-print(res.ok)
+print(res.status_code)  # 200
+print(res.ok)  # True
