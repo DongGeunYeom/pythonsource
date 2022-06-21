@@ -1,5 +1,6 @@
 # naver open api 이용하기 - 쇼핑
 import requests
+import re
 from openpyxl import Workbook
 from datetime import datetime
 
@@ -33,7 +34,6 @@ num = 0
 start = 1
 for idx in range(10):
     start_num = start + (idx * 100)
-
     url = (
         "https://openapi.naver.com/v1/search/shop.json?query=복분자&display=100&start="
         + str(start_num)
@@ -42,10 +42,17 @@ for idx in range(10):
     res = requests.get(url, headers=headers)
     # json 데이터 확인
     # print(res.json())
+
+    # 잘못된 정규표현식 pattern = re.compile("[/<\a-z0-9>]")
     for item in res.json()["items"]:
         num += 1
-        print(item["title"], item["link"], item["lprice"])
-        ws.append([num, item["title"], item["link"], item["lprice"]])
+
+        # 제품명에 태그 들어간 부분 제거하고 저장
+        # <b>아이폰</b>, <h1>아이폰</h1>
+        title = re.sub("<.+?>", "", item["title"])
+
+        print(title, item["link"], item["lprice"])
+        ws.append([num, title, item["link"], item["lprice"]])
 
 
 # 파일명 : clien_220620.xlsx
@@ -53,3 +60,4 @@ today = datetime.now().strftime("%y%m%d")
 filename = f"navershop_{today}.xlsx"
 # 엑셀 저장
 wb.save("./rpabasic/crawl/download/" + filename)
+wb.close()

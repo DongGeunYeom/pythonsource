@@ -201,3 +201,4 @@ include/
 pyvenv.cfg
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
+chromedriver.exe
